@@ -1,22 +1,13 @@
 <?php
 
-$ToDolist = [
+$testo = file_get_contents('./data.json');
 
-  [
-    'nome' => 'Pane',
-  ],
-  [
-    'nome' => 'Pasta',
-  ],
-  [
-    'nome' => 'Formaggio',
-  ],
-  [
-    'nome' => 'Carne',
-  ],
+//echo $testo;
+$phpArray = json_decode($testo, true);
 
-];
+//var_dump($phpArray);
+
 
 header('content-Type: application/json');
 
-echo json_encode($ToDolist);
+echo json_encode($phpArray);
