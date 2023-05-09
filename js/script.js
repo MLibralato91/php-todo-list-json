@@ -12,10 +12,13 @@ createApp({
   methods: {
     readlist() {
       axios.get(this.apiUrl).then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
         this.todoList = res.data;
       });
     },
+    updateList() {
+      console.log(this.todoItem)
+    }
   },
   mounted() {
     this.readlist();

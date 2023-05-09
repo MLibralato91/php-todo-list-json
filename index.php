@@ -26,8 +26,8 @@
       </div>
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Inserisci</button>
+        <input type="text" class="form-control" placeholder="Inserisci elemento.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model="todoItem" @keyup.enter="updateList">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="updateList">Inserisci</button>
       </div>
     </div>
   </div>
