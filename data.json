@@ -1,7 +1,22 @@
 [
-  "Pane",
-  "Pasta",
-  "Formaggio",
-  "Carne",
-  "Caffè"
+  {
+    "task": "Pane",
+    "done": true
+  },
+  {
+    "task": "Pesce",
+    "done": true
+  },
+  {
+    "task": "Carne",
+    "done": true
+  },
+  {
+    "task": "Frutta",
+    "done": true
+  },
+  {
+    "task": "Pane",
+    "done": true
+  }
 ]

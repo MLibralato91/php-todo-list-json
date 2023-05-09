@@ -14,20 +14,20 @@
 <body>
   <div id="app">
     <div class="container">
-
-
       <h1>{{title}}</h1>
-      <div class="col">
-        <div v-for="(todo,index) in todoList">
-          <p> {{todo}}</p>
-
-        </div>
-
+      <div class="col-4">
+        <ul class="list-group">
+          <li class="list-group-item justify-content-between d-flex" v-for="(todo,index) in todoList">
+            {{todo.task}}
+            <span class="badge text-bg-danger" @click="deleteTask">Remove</span>
+          </li>
+        </ul>
       </div>
-
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Inserisci elemento.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model="todoItem" @keyup.enter="updateList">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="updateList">Inserisci</button>
+      <div class="col-4">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Inserisci elemento.." aria-label="Recipient's username" aria-describedby="button-addon2" v-model="todoItem" @keyup.enter="updateList">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="updateList">Inserisci</button>
+        </div>
       </div>
     </div>
   </div>
